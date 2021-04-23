@@ -26,6 +26,7 @@ class BoggleAppTestCase(TestCase):
             html = response.get_data(as_text=True)
             # test that you're getting a template
             self.assertIn('<button class="word-input-btn">Go</button>', html)
+            self.assertIn("Boggle homepage. used in test, don't remove", html)
 
     def test_api_new_game(self):
         """Test starting a new game."""
